@@ -1,0 +1,342 @@
+/*
+Project Name: Transition to Employment Toolkit
+Client: Transition to Employment
+Author: Hyun Masiello 
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+/*
+colors: 
+
+*/
+
+body {
+  padding: 0px 15px;
+}
+
+header {
+  padding-top: 50px;
+}
+
+a {
+  color:#245E87;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #08263A ;
+}
+
+nav {
+  font-family: Arial;
+  font-size: 1.5em;
+  padding: 115px 0px 70px 0px;
+}
+
+nav ul {
+  list-style-type: none;
+  position: relative;
+}
+
+nav ul ul {
+  display: none;
+}
+
+nav ul li {
+  padding: 15px 0px 0px 30px;
+}
+
+nav ul ul li {
+  background: white;
+  display: block;
+  padding: 15px 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  color: #245E87;
+  font-family: Arial Narrow;
+  font-weight: 800;
+  font-size: 1.8em;
+  line-height: 1.5;
+  padding: 40px 0px 10px 0px;
+}
+
+h2 {
+  color: #245E87;
+  font-family: Arial;
+  font-weight: 200;
+  font-size: 1.25em;
+  line-height: 1.5;
+  padding-bottom: 10px;
+}
+
+h3 {
+  color: #245E87;
+  font-family: Arial;
+  font-size: 1.1em;
+  line-height: 1.5;
+  padding-bottom: 10px;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+ol li {
+  color: #58595B;
+  font-family: Arial;
+  font-size: 1em;
+  line-height: 1.5;
+  padding-bottom: 5px;
+  padding-left: 20px;
+}
+
+p {
+  color: #58595B;
+  font-family: Arial;
+  font-size: 1em;
+  line-height: 1.5;
+  padding-bottom: 10px;
+}
+
+footer {
+  margin-top: 70px;
+  padding: 40px 0px 0px 0px;
+  text-align: center;
+}
+
+ul {
+  list-style: circle;
+}
+
+ul li {
+  color: #58595B;
+  font-family: Arial;
+  font-size: 1em;
+  line-height: 1.5;
+  padding-bottom: 5px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+   
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.advisory {
+  padding-left: 20px;
+}
+
+.funding {
+  color: white;
+  background-color: #3399CC;
+  text-align: left;
+  padding: 8px;
+  margin: 50px 10px;
+}
+
+.homepageheader {
+  color: white;
+  font-family: Fjalla One;
+  font-size: 5em;
+  line-height: .6;
+}
+
+.logo {
+  padding-top: 20px;
+}
+
+.meet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 40px;
+}
+
+.meet_img {
+  text-align: center;
+  margin: 30px 0px;
+  padding-left: 50px;
+  max-width: 80%;
+}
+
+.meet:nth-of-type(1) .meet_img {
+  margin-left: 0
+}
+
+.meet:nth-of-type(3) .meet_img {
+  margin-right: 0
+}
+
+.mainphoto {
+  padding: 36px 0px 220px 36px;
+  margin: 18px 0px;
+  background-size: cover;
+}
+
+.partners{
+  padding-top: 15px;
+}
+
+.partnerdescription {
+  float: right;
+  width: 75%;
+}
+
+.partnerlogos {
+  float: left;
+  width: 25%;
+  padding-right: 10px;
+}
+
+.sitemap {
+  color: #245E87;
+  font-family: Arial;
+  font-size: 1.375rem;
+  padding: 50px 30px;
+}
+
+.readless {
+  color:#47A5DC;
+  text-decoration: none;
+}
+
+/* hides the read less */
+.collapse {
+  display: none;
+}
+
+/* hides the paragraph of text that will slide down */
+.content {
+  display: none;
+}
+
+
+
+.collaboration {
+  background-image: url('Homepage_Collaboration.jpg');
+}
+
+.employment {
+  background-image: url('Homepage_Employment.jpg');
+}
+
+.intervention {
+  background-image: url('Homepage_Intervention.jpg')
+}
+
+.skilled {
+  background-image: url('Homepage_SkilledProfessional.jpg');
+}
+
+
+
+.hideCollaboration1{
+    display: none;
+  }
+
+
+
+
+
+/******************************************
+/* RESPONSIVE
+/*******************************************/
+
+/* screens wider than 768px take these styles */
+@media (min-width: 768px) {
+
+  nav {
+    float: right; 
+  }
+
+  .logo {
+    float: left;
+  }
+
+  nav ul li {
+    display: inline;
+  }
+
+  nav ul ul {
+    margin-left: -130px;
+    padding: 30px 0px;
+    position: absolute;
+    top: 100%;
+    z-index: 2;
+  }
+
+  nav ul li:hover > ul {
+    display: inline-block;
+  }
+
+  .navalign {
+    margin-left: -110px;
+  }
+
+  .meet {
+    float: left;
+    width: 33.333%;
+  }
+
+  .meet_img {
+    display: block;
+  }
+
+  .story img {
+    float: left;
+    width: 30%;
+  }
+
+  .story > div {
+    float: left;
+    width: 70%;
+  }
+} /*closing the media*/
