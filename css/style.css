@@ -46,6 +46,7 @@ header {
   padding-top: 50px;
 }
 
+
 a {
   color:#47A5DC;
   text-decoration: none;
@@ -94,7 +95,9 @@ h1 {
   font-size: 1.8em;
   line-height: 1.5;
   padding: 20px 0px 10px 0px;
+  color: white;
 }
+
 
 h2 {
   font-weight: 200;
@@ -194,6 +197,10 @@ em {
   line-height: .6;
 }
 
+.homepageheaderlink {
+  color: white;
+}
+
 .logo {
   padding-top: 20px;
 }
@@ -281,7 +288,6 @@ em {
 }
 
 
-
 .hideCollaboration1{
     display: none;
   }
@@ -310,7 +316,7 @@ em {
   }
 
   nav ul ul {
-    margin-left: -130px;
+    margin-left: -175px;
     padding: 30px 0px;
     position: absolute;
     top: 100%;
@@ -322,7 +328,7 @@ em {
   }
 
   .navalign {
-    margin-left: -110px;
+    margin-left: -150px;
   }
 
   .meet {
