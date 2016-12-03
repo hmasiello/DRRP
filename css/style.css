@@ -1,7 +1,7 @@
 /*
 Project Name: Transition to Employment Toolkit
 Client: Transition to Employment
-Author: Hyun Masiello 
+Author: Hyun Masiello
 */
 
 
@@ -34,9 +34,14 @@ Author: Hyun Masiello
 /* BASE STYLES
 /*******************************************/
 /*
-colors: 
+colors:
 
 */
+
+html {
+  color: #245E87;
+  font-family: Arial;
+}
 
 body {
   padding: 0px 15px;
@@ -57,7 +62,6 @@ a:hover {
 }
 
 nav {
-  font-family: Arial;
   font-size: 1.5em;
   padding: 115px 0px 70px 0px;
 }
@@ -81,13 +85,35 @@ nav ul ul li {
   padding: 15px 10px;
 }
 
-img {
-  max-width: 100%;
+@media (min-width: 768px) {
+
+  nav {
+    float: right;
+  }
+
+  nav ul li {
+    display: inline;
+  }
+
+  nav ul ul {
+    margin-left: -175px;
+    padding: 30px 0px;
+    position: absolute;
+    top: 100%;
+    z-index: 2;
+  }
+
+  nav ul li:hover > ul {
+    display: inline-block;
+  }
+
+  .navalign {
+    margin-left: -150px;
+  }
 }
 
-html {
-  color: #245E87;
-  font-family: Arial;
+img {
+  max-width: 100%;
 }
 
 h1 {
@@ -95,7 +121,7 @@ h1 {
   font-size: 1.8em;
   line-height: 1.5;
   padding: 20px 0px 10px 0px;
-  
+
 }
 
 
@@ -303,32 +329,8 @@ em {
 /* screens wider than 768px take these styles */
 @media (min-width: 768px) {
 
-  nav {
-    float: right; 
-  }
-
   .logo {
     float: left;
-  }
-
-  nav ul li {
-    display: inline;
-  }
-
-  nav ul ul {
-    margin-left: -175px;
-    padding: 30px 0px;
-    position: absolute;
-    top: 100%;
-    z-index: 2;
-  }
-
-  nav ul li:hover > ul {
-    display: inline-block;
-  }
-
-  .navalign {
-    margin-left: -150px;
   }
 
   .meet {
@@ -340,13 +342,4 @@ em {
     display: block;
   }
 
-  .story img {
-    float: left;
-    width: 30%;
-  }
-
-  .story > div {
-    float: left;
-    width: 70%;
-  }
 } /*closing the media*/
