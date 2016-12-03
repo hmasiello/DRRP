@@ -4,47 +4,40 @@ $( document ).ready(function(){
 
 	//slider show more show less
 
-		//What is it?
-		$('.expand').click(function(e) {
-			// "this" refers to the "a" that was clicked
-			e.preventDefault();
-			var commonContainer = $(this).closest('.container');
-			// commonContainer now refers to the parent div that has a class of "container" on it. This commonContainer is common ancestor to the <a> tag that was clicked on, but also to the paragraph of text and the Read less link.
+	//What is it?
+	$('.toggle').click(function(e) {
+		// "this" refers to the "a" that was clicked
+		e.preventDefault();
 
-			// Doing this code would call slideDown() on ALL elements with a class of content and collapse. We only wanna slideDown() those that are a child of commonContainer
-			// $('.content, .collapse').slideDown();
+		var contentId = $(this).attr('aria-controls');
 
-			// So instead we do this:
-			// Using commonContainer as a starting point, we find its children using .find() that have the matching selectors "content" or "collapse", and then on those we call slideDown()
-			commonContainer.find('.content, .collapse').slideDown();
+		// Find all elements that control this element
+		var $toggleControls = $('[aria-controls=' + contentId + ']');
+		// Gets the current value for aria-expanded off of the toggle links
+		var currentAriaExpandedState = JSON.parse($toggleControls.attr('aria-expanded'));
+		// Set the next state to be the oppositive of what it is currently
+		var nextExpandedState = !currentAriaExpandedState;
 
+		// Find the content that should be shown/hidden
+		// slideToggle() knows to either expand or collapse
+		$('#' + contentId).slideToggle({
+			// Once the animation completes, fun this function
+			complete: function() {
+				// "this" refers to the element we just expanded/collapsed via slideToggle()
+				// save it as a variable called "$content"
+				var $content = $(this);
 
+				// Get the current aria-hidden state for this element
+				var currentAriaHiddenState = JSON.parse($(this).attr('aria-hidden'));
+				// The next state is the inverse of the current state
+				var nextAriaHiddenState = !currentAriaHiddenState;
+				// Update the $content to have the next state
+				$content.attr('aria-hidden', nextAriaHiddenState);
 
-			// Again, here we don't wanna do this because it will hide ALL <a> tags that are a child of .expand. When in fact we only wanna call those that are a child of commonContainer
-			// $('.expand a').hide();
-
-			// So we could do this:
-			// And it would totally work
-			// commonContainer.find('.expand a').hide();
-
-			// But because "this" already refers to the <a> tag we want to hide, we can just do this:
-			$(this).hide();
+				// And finally update the links that control the hiding/showing to have the correct
+				// aria-expanded state
+				$toggleControls.attr('aria-expanded', nextExpandedState);
+			}
 		});
-
-		$('.collapse').click(function(e) {
-			//Inside this method, its the same routine as above.
-			//We need to find the common ancestor, ".container" and then use it as a starting point to traverse the DOM and find the elements we need to hide/show/slide
-
-			//in this case, "this" refers to the element that was clicked on that has the .collpase class
-			e.preventDefault();
-			// so here we use that as our starting point and traverse UP the DOM to find the closest parent element that has a class of .container. That will be our common container.
-			var commonContainer = $(this).closest('.container');
-
-			commonContainer.find('.content, .collapse').slideUp();
-
-
-			commonContainer.find('.expand').show();
-		});
-
-
+	});
 })

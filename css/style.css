@@ -265,7 +265,7 @@ em {
 }
 
 /* hides the paragraph of text that will slide down */
-.content {
+[aria-hidden="true"] {
 	display: none;
 }
 
