@@ -71,10 +71,6 @@ nav ul {
   position: relative;
 }
 
-nav ul ul {
-  display: none;
-}
-
 nav ul li {
   padding: 15px 0px 0px 30px;
 }
@@ -89,6 +85,10 @@ nav ul ul li {
 
   nav {
     float: right;
+  }
+
+  nav ul ul {
+    display: none;
   }
 
   nav ul li {
