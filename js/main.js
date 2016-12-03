@@ -5,7 +5,7 @@ $( document ).ready(function(){
 	//slider show more show less
 
 		//What is it?
-		$('.expand a').click(function(e) {
+		$('.expand').click(function(e) {
 			// "this" refers to the "a" that was clicked
 			e.preventDefault();
 			var commonContainer = $(this).closest('.container');
@@ -43,7 +43,7 @@ $( document ).ready(function(){
 			commonContainer.find('.content, .collapse').slideUp();
 
 
-			commonContainer.find('.expand a').show();
+			commonContainer.find('.expand').show();
 		});
 
 
