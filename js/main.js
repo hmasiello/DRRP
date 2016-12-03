@@ -4,7 +4,19 @@ $( document ).ready(function(){
 
   //slider show more show less
   setupExpandy();
+  setupNavigation();
 });
+
+function setupNavigation() {
+  /*
+   * This uses the accessible-navigation.js plugin
+   * which exposes setup_navigation() fn for
+   * jQuery elements
+   */
+  $('nav > ul').setup_navigation({
+    menuHoverClass: 'showMenu'
+  });
+};
 
 
 function setupExpandy() {

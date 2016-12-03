@@ -123,8 +123,8 @@ nav ul ul li {
     padding-bottom: 15px;
   }
 
-  nav ul li:hover > ul {
-    display: inline-block;
+  .showMenu {
+    display: block;
   }
 }
 
