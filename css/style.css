@@ -68,11 +68,16 @@ nav {
 
 nav ul {
   list-style-type: none;
-  position: relative;
 }
 
 nav ul li {
   padding: 15px 0px 0px 30px;
+  margin: 0;
+  position: relative;
+}
+
+nav ul ul {
+  margin-left: 15px;
 }
 
 nav ul ul li {
@@ -93,22 +98,33 @@ nav ul ul li {
 
   nav ul li {
     display: inline;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   nav ul ul {
-    margin-left: -175px;
-    padding: 30px 0px;
+    left: 0;
+    min-width: 100%;
+    margin-left: 0;
+    padding: 10px 0 0;
     position: absolute;
     top: 100%;
     z-index: 2;
   }
 
-  nav ul li:hover > ul {
-    display: inline-block;
+  nav ul ul li {
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
   }
 
-  .navalign {
-    margin-left: -150px;
+  nav ul ul li:last-child {
+    padding-bottom: 15px;
+  }
+
+  nav ul li:hover > ul {
+    display: inline-block;
   }
 }
 
