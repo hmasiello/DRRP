@@ -3,7 +3,23 @@ $( document ).ready(function(){
 	//COLLABORATION
 
 	//slider show more show less
+	setupExpandy();
+	setupNavigation();
+});
 
+function setupNavigation() {
+	/*
+	 * This uses the accessible-navigation.js plugin
+	 * which exposes setup_navigation() fn for
+	 * jQuery elements
+	 */
+	$('nav > ul').setup_navigation({
+		menuHoverClass: 'showMenu'
+	});
+};
+
+
+function setupExpandy() {
 	//What is it?
 	$('.toggle').click(function(e) {
 		// "this" refers to the "a" that was clicked
@@ -40,4 +56,4 @@ $( document ).ready(function(){
 			}
 		});
 	});
-})
+}
