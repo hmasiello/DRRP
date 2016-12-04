@@ -220,6 +220,10 @@ em {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+.toggle {
+	cursor: pointer;
+}
+
 .advisory {
 	padding-left: 20px;
 }
@@ -307,7 +311,7 @@ em {
 }
 
 /* hides the paragraph of text that will slide down */
-.content {
+[aria-hidden="true"] {
 	display: none;
 }
 
