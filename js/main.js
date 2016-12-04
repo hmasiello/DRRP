@@ -53,6 +53,15 @@ function setupExpandy() {
 				// And finally update the links that control the hiding/showing to have the correct
 				// aria-expanded state
 				$toggleControls.attr('aria-expanded', nextExpandedState);
+
+				if (nextExpandedState) {
+					// Put focus on the content once its exapnded
+					$content.attr('tabIndex', -1);
+					$content[0].focus();
+				} else {
+					// Put focus back at title link
+					$toggleControls.eq(0)[0].focus();
+				}
 			}
 		});
 	});
