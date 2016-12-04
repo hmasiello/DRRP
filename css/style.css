@@ -220,6 +220,10 @@ em {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+.toggle {
+	cursor: pointer;
+}
+
 .advisory {
 	padding-left: 20px;
 }
