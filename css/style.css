@@ -311,11 +311,11 @@ em {
 }
 
 /* hides the paragraph of text that will slide down */
-[aria-hidden="true"] {
-	display: none;
+@media (min-width: 768px) {
+	[role="menu"][aria-hidden="true"] {
+		display: none;
+	}
 }
-
-
 
 .collaboration {
 	background-image: url('Homepage_Collaboration.jpg');
