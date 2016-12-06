@@ -40,7 +40,7 @@ colors:
 
 html {
 	color: #245E87;
-	font-family: Arial;
+	font-family: Arial, sans-serif;
 }
 
 body {
@@ -145,11 +145,10 @@ img {
 }
 
 h1 {
-	font-family: 'Arial Narrow';
+	font-family: 'Arial Narrow', Arial, sans-serif;
 	font-size: 1.8em;
 	line-height: 1.5;
 	padding: 20px 0px 10px 0px;
-
 }
 
 
@@ -172,7 +171,6 @@ ol {
 
 ol li {
 	color: #58595B;
-	font-family: Arial;
 	font-size: 1em;
 	line-height: 1.5;
 	padding-bottom: 10px;
@@ -181,7 +179,6 @@ ol li {
 
 p {
 	color: #58595B;
-	font-family: Arial;
 	font-size: 1em;
 	line-height: 1.5;
 	padding-bottom: 10px;
@@ -224,7 +221,6 @@ em {
 
 /* Center the container */
 .container {
-	width: 100%;
 	max-width: 1000px;
 	margin: auto;
 }
@@ -248,17 +244,6 @@ em {
 	margin: 50px 10px;
 }
 
-.homepageheader {
-	color: white;
-	font-family: 'Fjalla One';
-	font-size: 5em;
-	line-height: 1.25;
-}
-
-.homepageheaderlink {
-	color: white;
-}
-
 .logo {
 	padding-top: 20px;
 }
@@ -274,8 +259,13 @@ em {
 .meet_img {
 	text-align: center;
 	margin: 15px 0px;
-	padding-left: 50px;
-	max-width: 80%;
+	max-width: 250px;
+}
+
+@media (min-width: 768px) {
+	.meet_img {
+		max-width: 80%;
+	}
 }
 
 .meet:nth-of-type(1) .meet_img {
@@ -287,9 +277,27 @@ em {
 }
 
 .mainphoto {
-	padding: 36px 0px 200px 36px;
+	padding: 36px 35px 200px;
 	margin: 18px 0px;
 	background-size: cover;
+	background-position: center center;
+}
+
+.homepageheader {
+	color: white;
+	font-family: 'Fjalla One', Arial, sans-serif;
+	font-size: 2.25em;
+	line-height: 1.25;
+}
+
+@media (min-size: 768px) {
+	.homepageheader {
+		font-size: 5em;
+	}
+}
+
+.homepageheaderlink {
+	color: white;
 }
 
 .partners{
@@ -309,6 +317,7 @@ em {
 
 .sitemap {
 	font-size: 1.375rem;
+	line-height: 1.5;
 	padding: 50px 30px;
 }
 
@@ -370,6 +379,7 @@ em {
 
 	.meet_img {
 		display: block;
+		padding-left: 50px;
 	}
 
 } /*closing the media*/
