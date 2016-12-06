@@ -66,6 +66,18 @@ nav {
 	padding: 115px 0px 70px 0px;
 }
 
+/* Makes the navigation visible for mobile */
+nav [aria-hidden="true"] {
+	display: block;
+}
+
+/* Now do the usual desktop pattern */
+@media (min-width: 768px) {
+	[role="menu"][aria-hidden="true"] {
+		display: none;
+	}
+}
+
 nav ul {
 	list-style-type: none;
 }
@@ -311,10 +323,8 @@ em {
 }
 
 /* hides the paragraph of text that will slide down */
-@media (min-width: 768px) {
-	[role="menu"][aria-hidden="true"] {
-		display: none;
-	}
+[aria-hidden="true"] {
+	display: none;
 }
 
 .collaboration {
