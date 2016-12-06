@@ -226,11 +226,25 @@ em {
 }
 
 /******************************************
-/* ADDITIONAL STYLES
+/* EXPANDING CONTENT
 /*******************************************/
+
+.expandy-title {
+	padding-bottom: 0;
+}
+
+.expandy-title a {
+	/* FIXME:*/
+	/* color: SET_THE_COLOR_YOU_WANT_HERE; */
+}
+
 .toggle {
 	cursor: pointer;
 }
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
 
 .advisory {
 	padding-left: 20px;
