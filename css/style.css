@@ -53,12 +53,16 @@ header {
 
 
 a {
-	color:#47A5DC;
+	color: #245E87;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #08263A ;
+	color: #47A5DC;
+}
+
+.homepageheader a:hover{
+	color: #08263A;
 }
 
 nav {
@@ -156,7 +160,7 @@ h2 {
 	font-weight: 200;
 	font-size: 1.25em;
 	line-height: 1.5;
-	padding-bottom: 10px;
+	padding: 10px 0px;
 }
 
 h3 {
@@ -286,7 +290,7 @@ em {
 .homepageheader {
 	color: white;
 	font-family: 'Fjalla One', Arial, sans-serif;
-	font-size: 2.25em;
+	font-size: 5em;
 	line-height: 1.25;
 }
 
@@ -381,5 +385,6 @@ em {
 		display: block;
 		padding-left: 50px;
 	}
+
 
 } /*closing the media*/
