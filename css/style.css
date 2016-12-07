@@ -287,19 +287,22 @@ em {
 	background-position: center center;
 }
 
-
+.homepageheader {
+	color: white;
+	font-family: 'Fjalla One', Arial, sans-serif;
+	font-size: 2.5em;
+	line-height: 1.25;
+}
 
 @media (min-size: 768px) {
 	.homepageheader {
-		font-size: 5em;
+		font-size: 2.5em;
 	}
 }
 
 .homepageheaderlink {
 	color: white;
 }
-
-
 
 .sitemap {
 	font-size: 1.375rem;
@@ -338,13 +341,9 @@ em {
 	background-image: url('Homepage_SkilledProfessional.jpg');
 }
 
-
 .hideCollaboration1{
 		display: none;
 	}
-
-
-
 
 
 /******************************************
@@ -382,11 +381,9 @@ em {
 		width: 25%;
 		padding-right: 10px;
 	}
+
 	.homepageheader {
-	color: white;
-	font-family: 'Fjalla One', Arial, sans-serif;
-	font-size: 2.5em;
-	line-height: 1.25;
+		font-size: 4.5em;
 }
 
 } /*closing the media*/
