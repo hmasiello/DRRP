@@ -294,12 +294,6 @@ em {
 	line-height: 1.25;
 }
 
-@media (min-size: 768px) {
-	.homepageheader {
-		font-size: 2.5em;
-	}
-}
-
 .homepageheaderlink {
 	color: white;
 }
