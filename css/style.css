@@ -268,7 +268,7 @@ em {
 
 @media (min-width: 768px) {
 	.meet_img {
-		max-width: 80%;
+		max-width: 200px;
 	}
 }
 
